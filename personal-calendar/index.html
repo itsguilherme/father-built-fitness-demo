@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Hidden page: Shaun's personal booking calendar. Not linked from nav/footer.
+     Reached only via its direct URL (CRM's default-calendar public page, or shared directly).
+     DESIGN PREVIEW: calendar is local-only JS (booking-preview.js), not yet wired to a
+     real backend, Shaun's booking-backend/CRM doesn't exist yet (build order: pages first,
+     CRM last). Swap in the real booking-widget.js once that's deployed. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Call | Father Built Fitness</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css?v=12">
+</head>
+<body class="booking-page">
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-logo" aria-label="Father Built Fitness home">
+      <img src="../images/logo-shield.png" alt="">
+      <span>FATHER BUILT<em>FITNESS</em></span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="booking-hero">
+    <div class="container">
+      <h1>Book a Call With Shaun</h1>
+      <p>Pick a time that works. No cost, no pressure, just a real conversation.</p>
+    </div>
+  </section>
+
+  <section class="booking-shell">
+    <div class="container">
+      <div class="booking-card" data-booking-widget>
+        <div class="booking-step" id="step-slots">
+          <p class="booking-step-heading">Pick a date &amp; time</p>
+          <div class="booking-calendar-header">
+            <button class="booking-cal-nav" id="cal-prev" type="button" aria-label="Previous month">&larr;</button>
+            <span class="booking-calendar-month" id="cal-month-label"></span>
+            <button class="booking-cal-nav" id="cal-next" type="button" aria-label="Next month">&rarr;</button>
+          </div>
+          <div class="booking-calendar-weekdays">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="booking-calendar-grid" id="cal-grid"></div>
+
+          <div class="booking-times" id="booking-times" hidden>
+            <p class="booking-step-heading" id="booking-times-heading">Available times</p>
+            <div class="booking-slots-times" id="booking-slots-times"></div>
+          </div>
+        </div>
+
+        <div class="booking-step" id="step-form" hidden>
+          <p class="booking-step-heading">Your details</p>
+          <div class="booking-recap">
+            <strong>Time:</strong> <span id="recap-time"></span>
+          </div>
+          <form id="booking-form">
+            <div class="booking-field">
+              <span>Full Name</span>
+              <input type="text" name="name" required>
+            </div>
+            <div class="booking-field">
+              <span>Email Address</span>
+              <input type="email" name="email" required>
+            </div>
+            <div class="booking-field">
+              <span>Phone</span>
+              <input type="tel" name="phone">
+            </div>
+            <div class="booking-form-actions">
+              <button class="btn btn-secondary" id="booking-back-btn" type="button">Back</button>
+              <button class="btn btn-primary" type="submit">Confirm Booking</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="booking-step" id="step-confirm" hidden>
+          <div class="booking-confirm">
+            <div class="booking-confirm-icon">&#10003;</div>
+            <h3>You're Booked!</h3>
+            <p id="confirm-recap"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top" type="button">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="6 11 12 5 18 11"></polyline>
+  </svg>
+</button>
+
+<script src="../js/main.js?v=1"></script>
+<script src="../js/booking-preview.js?v=1"></script>
+</body>
+</html>
