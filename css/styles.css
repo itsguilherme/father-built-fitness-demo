@@ -913,22 +913,6 @@ section {
   font-size: 0.95rem;
 }
 
-/* ---------- Testimonial ---------- */
-
-.testimonial-card {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 48px 32px;
-  text-align: center;
-  border: 1px dashed rgba(254, 238, 238, 0.2);
-  border-radius: 8px;
-  color: rgba(254, 238, 238, 0.45);
-  font-family: var(--font-title2);
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-}
-
 /* ---------- Final CTA ---------- */
 
 .final-cta {
