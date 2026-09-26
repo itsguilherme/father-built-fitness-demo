@@ -1687,11 +1687,13 @@ section {
 /* ---------- Product detail pages (offer pages) ---------- */
 
 .hero-banner-img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 32px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 420px;
+  margin: 0 auto 32px;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .product-price {
