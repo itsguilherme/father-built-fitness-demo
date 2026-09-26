@@ -120,7 +120,12 @@ p {
 .btn-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
+}
+
+.about-copy .btn-row {
+  justify-content: flex-start;
 }
 
 /* ---------- Header ---------- */
