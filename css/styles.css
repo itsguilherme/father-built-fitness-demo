@@ -259,10 +259,22 @@ p {
 /* ---------- Offer page header (no nav, small centered logo) ---------- */
 
 .offer-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
   display: flex;
   justify-content: center;
   padding: 24px 0;
-  background: var(--color-black);
+  background: transparent;
+}
+
+/* Offer-header floats over the page's own first-section background (no
+   separate header bar), so that section needs extra top padding to clear
+   the logo, and its gradient (if any) now starts from the true page top. */
+.offer-header ~ main > section:first-child {
+  padding-top: 104px;
 }
 
 .offer-logo img {
